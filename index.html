@@ -7,6 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" type="text/css" href="css/NathanSaxton.css" />
+    <script src="js/NathanSaxton.js" defer></script>
 </head>
 
 <body>
@@ -16,6 +17,9 @@
             <ul class="nav-menu">
                 <a href="#home">
                     <li>Home</li>
+                </a>
+                <a href="#slideshow">
+                    <li>Slideshow</li>
                 </a>
                 <a href="#about">
                     <li>About</li>
@@ -46,6 +50,56 @@
                         You will find my background and experience below.
                         Thank you for visiting!
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Slide Show-->
+    <section id="slideshow">
+        <div class="wrap">
+            <div class="slideContainer">
+                <div class="slide fade first">
+                    <img src="media/headshot.png" alt="Headshot" />
+                    <div class="caption">I'd love to assist you on your projects!</div>
+                </div>
+                <div class="slide fade">
+                    <img src="media/frontend.png" alt="Front End" />
+                    <div class="caption">I'm a full-stack developer.<br /> Trained in: <br />HTML, CSS, JavaScript,
+                        Bootstrap,
+                    </div>
+                </div>
+                <div class="slide fade">
+                    <img src="media/python.jpg" alt="Python" />
+                    <div class="caption">Python, </div>
+                </div>
+                <div class="slide fade">
+                    <img src="media/c_sharp.jpg" alt="C#" />
+                    <div class="caption">C#, .NET Framework, ASP.NET, MVC, </div>
+                </div>
+                <div class="slide fade">
+                    <img src="media/sql_logo.jpg" alt="SQL Logo" />
+                    <div class="caption">back end development, databases and SQL.</div>
+                </div>
+                <div class="slide fade">
+                    <img src="media/contact_us.jpg" alt="Contact Us" />
+                    <div class="caption">Contact me today!</div>
+                </div>
+                <!--next/prev slide buttons-->
+                <div id="prev" onclick="changeSlide(-1)">
+                    &#10094;
+                </div>
+                <div id="next" onclick="changeSlide(1)">
+                    &#10095;
+                </div>
+                <!--Dots to give visual-->
+                <div class="slideDots">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
                 </div>
             </div>
         </div>
