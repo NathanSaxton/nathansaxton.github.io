@@ -131,6 +131,94 @@ h1 {
     padding: 1% 25%;
 }
 
+/*SlideShow*/
+
+#slideshow .wrap{
+    background-color: rgba(0, 0, 0, .7);
+    height: 100vh;
+
+}
+.slideContainer{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    text-align: center;
+    height: 100%;
+    padding: 5% auto;
+}
+
+#slideshow img {
+    object-fit: cover;
+    z-index: -1;
+}
+
+.slide {
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 10%;
+    right: 10%;
+    display: none;
+}
+
+.first {
+    display: block;
+}
+
+#prev, #next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 18px;
+    transition: .6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+#next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 15%;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 5px;
+    font-size: x-large;
+}
+
+.slideDots {
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    right: 40%;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: silver;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease;
+}
+
+.active, .dot:hover{
+    background-color: gray;
+}
+
 /*Rows and Columns*/
 
 .row {
@@ -183,9 +271,10 @@ a {
 
 /*Video and Image*/
 
-img {
+.col img {
     width: 100%;
     height: 55vw;
+    z-index: -1;
 }
 
 #github img {
@@ -224,7 +313,7 @@ video {
 
 /*Animations*/
 
-.nav-menu li, #submit{
+.nav-menu li, #submit, .prev, .next{
     transition-property: background;
     transition-duration: .3s;
     transition-delay: 0s;
@@ -236,7 +325,28 @@ video {
     color: rgb(192, 192, 192);
 }
 
-img:hover {
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade{
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.col img:hover {
     transform: scale(1.5);
     transition: transform .5s;
     
