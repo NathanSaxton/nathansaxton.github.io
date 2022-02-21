@@ -161,10 +161,6 @@ h1 {
     display: none;
 }
 
-.first {
-    display: block;
-}
-
 #prev, #next {
     cursor: pointer;
     position: absolute;
