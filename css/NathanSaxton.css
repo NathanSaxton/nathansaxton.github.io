@@ -481,6 +481,7 @@ video {
     #slideshow img {
         object-fit: fill;
         height: 88%;
+        width: 100%;
     }
 
     .caption {
