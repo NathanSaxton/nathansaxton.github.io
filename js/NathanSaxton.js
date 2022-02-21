@@ -1,15 +1,15 @@
 var slideIndex = 1;
-showSlides(slideIndex);
+showSlides(slideIndex); //sets the initial slide as image 1
 
-function changeSlide(n) {
+function changeSlide(n) { //changes the slide using the next and prev buttons
     showSlides(slideIndex += n);
 }
 
-function currentSlide(n) {
+function currentSlide(n) { //changes the slide using the dots
     showSlides(slideIndex = n)
 }
 
-function showSlides(n) {
+function showSlides(n) {//changes what slide is viewed by the user based off the slide index
     var i;
     var slides = document.getElementsByClassName("slide");
     var dots = document.getElementsByClassName("dot");
@@ -29,18 +29,18 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 
-function showContact() {
+function showContact() { //shows the contact form
     document.getElementById('hidden-form').style.display = "block";
 }
 
-function closeContact() {
+function closeContact() { //closes the contact form
     document.getElementById('hidden-form').style.display = "none";
 }
 
-function toLinkedIn(){
+function toLinkedIn(){ //uses the onclick event to redirect to my linkedIn profile
     location.href = "https://www.linkedin.com/in/nathan-saxton-23835a145/"
 }
 
-function goTo(target){
+function goTo(target){ //moves the user to another section of the page. 
     window.location.hash = target;
 }
