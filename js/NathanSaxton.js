@@ -28,3 +28,19 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+
+function showContact() {
+    document.getElementById('hidden-form').style.display = "block";
+}
+
+function closeContact() {
+    document.getElementById('hidden-form').style.display = "none";
+}
+
+function toLinkedIn(){
+    location.href = "https://www.linkedin.com/in/nathan-saxton-23835a145/"
+}
+
+function goTo(target){
+    window.location.hash = target;
+}
