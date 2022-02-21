@@ -58,7 +58,7 @@ nav {
     margin: 0% auto;
     width: 100%;
     position: fixed;
-    z-index: 100;
+    z-index: 5;
     padding: 0;
 }
 
@@ -80,14 +80,9 @@ nav {
 }
 
 .nav-menu li{
-    color: rgba(62, 180, 137, 1);
     display: inline-block;
     position: relative;
-    background-color: silver;
     cursor: pointer;
-    padding: 20px 4%;
-    border: solid 1px rgba(0, 0, 0, .7);
-    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, .3);
     font-size: 2vw;
     margin: 0 auto;
 }
@@ -135,7 +130,7 @@ h1 {
 
 #slideshow .wrap{
     background-color: rgba(0, 0, 0, .7);
-    height: 100vh;
+    height: 80vh;
 
 }
 .slideContainer{
@@ -145,11 +140,16 @@ h1 {
     text-align: center;
     height: 100%;
     padding: 5% auto;
+    background-color: rgba(0, 0, 0, .7);
 }
 
 #slideshow img {
-    object-fit: cover;
+    object-fit: contain;
+    height: 83%;
+    width: 50%;
     z-index: -1;
+    transform: scale(1);
+    transition: transform .3s;
 }
 
 .slide {
@@ -180,6 +180,10 @@ h1 {
     user-select: none;
 }
 
+#prev {
+    left: 1vw;
+}
+
 #next {
     right: 0;
     border-radius: 3px 0 0 3px;
@@ -190,24 +194,22 @@ h1 {
     bottom: 0;
     right: 0;
     left: 0;
-    width: 100%;
     height: 15%;
-    background-color: rgba(0, 0, 0, .7);
-    padding: 5px;
-    font-size: x-large;
+    padding: 10px;
+    font-size: 2vw;
 }
 
 .slideDots {
     position: absolute;
-    bottom: 0;
+    bottom: 1%;
     left: 40%;
     right: 40%;
 }
 
 .dot {
     cursor: pointer;
-    height: 15px;
-    width: 15px;
+    height: 1vw;
+    width: 1vw;
     margin: 0 2px;
     background-color: silver;
     border-radius: 50%;
@@ -236,6 +238,7 @@ h1 {
 h2 {
     font-size: 6vw;
     color: rgba(62, 180, 137, 1);
+    margin: 5px auto;
 }
 
 #about h2 {
@@ -256,7 +259,7 @@ h2 {
     text-align: center;
 }
 
-a {
+.col a {
     color: goldenrod;
     transition-property: color;
     transition-duration: .3s;
@@ -284,12 +287,25 @@ video {
     width: 100%;
     height: 100%;
     filter: grayscale();
+    transition: filter .3s;
 }
 
 /* Form */
+#contact {
+    margin: 3% auto;
+}
+
+#hidden-form {
+    display: none;
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+    width: 50%;
+    background-color: rgba(0, 0, 0, .9);
+    padding: 10px;
+}
 
 .form-text{
-    display: block;
     margin: 5px 15%;
     width: 70%;
     height: 3vw;
@@ -300,32 +316,46 @@ video {
     height: 15vw;
 }
 
-#submit {
+.button {
     color: rgba(62, 180, 137, 1);
     font: bold 12px/18px sans-serif;
-    padding: 10px 4%;
+    padding: 20px 4%;
     background-color: silver;
     border: solid 1px rgba(0, 0, 0, .7);
     box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, .3);
     font-size: 2vw;
 }
 
+.contact {
+    width: 20%;
+    font-size: 3vw;
+}
 
 /*Animations*/
 
-.nav-menu li, #submit, .prev, .next{
+.nav-menu li, .button, .prev, .next{
     transition-property: background;
     transition-duration: .3s;
     transition-delay: 0s;
     transition-timing-function: ease-in-out;
 }
 
-.nav-menu li:hover, #submit:hover{
+.button:hover{
     background-color: rgba(62, 180, 137, .7);
-    color: rgb(192, 192, 192);
+    color: silver;
 }
 
-.prev:hover, .next:hover {
+.nav-menu a:hover {
+    color: silver;
+}
+
+
+#slideshow img:hover {
+    transform: scaleX(1.5);
+    transition: transform .3s;
+}
+
+#prev:hover, #next:hover {
     background-color: rgba(0, 0, 0, .7);
 }
 
@@ -394,10 +424,10 @@ video {
         text-align: left;
     }
 
-    .nav-menu li{
+    .button{
         position: relative;
         display: inline-block;
-        width: 20%;
+        width: 15%;
         margin: 0;
         font-size: 3vw;
         padding: 10px 0px;
@@ -430,5 +460,31 @@ video {
 
     #github p {
         margin: 5% 0;
+    }
+
+    #hidden-form {
+        width: 100%;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+    }
+    
+    #next, #prev {
+        width: 10%;
+        height: 48vh;
+        top: 0;
+        padding-top: 50%;
+    }
+
+    #slideshow img {
+        object-fit: fill;
+        height: 88%;
+    }
+
+    .caption {
+        height: 10%;
+        font-size: 3vw;
     }
 }
