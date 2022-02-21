@@ -15,21 +15,21 @@
     <nav>
         <div class="menu-container">
             <ul class="nav-menu">
-                <a href="#home">
+                <button class="button" onclick="goTo('#home')">
                     <li>Home</li>
-                </a>
-                <a href="#slideshow">
+                </button>
+                <button class="button" onclick="goTo('#slideshow')">
                     <li>Slideshow</li>
-                </a>
-                <a href="#about">
+                </button>
+                <button class="button" onclick="goTo('#about')">
                     <li>About</li>
-                </a>
-                <a href="#github">
+                </button>
+                <button class="button" onclick="goTo('#github')">
                     <li>Github</li>
-                </a>
-                <a href="#contact">
+                </button>
+                <button class="button" onclick="showContact()">
                     <li>Contact</li>
-                </a>
+                </button>
             </ul>
         </div>
     </nav>
@@ -60,12 +60,12 @@
         <div class="wrap">
             <div class="slideContainer">
                 <div class="slide fade first">
-                    <img src="media/headshot.png" alt="Headshot" />
+                    <img src="media/headshot.png" alt="Headshot" onclick="toLinkedIn()"/>
                     <div class="caption">I'd love to assist you on your projects!</div>
                 </div>
                 <div class="slide fade">
                     <img src="media/frontend.png" alt="Front End" />
-                    <div class="caption">I'm a full-stack developer.<br /> Trained in: <br />HTML, CSS, JavaScript,
+                    <div class="caption">I'm a full-stack developer. Trained in: <br />HTML, CSS, JavaScript,
                         Bootstrap,
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                     <div class="caption">back end development, databases and SQL.</div>
                 </div>
                 <div class="slide fade">
-                    <img src="media/contact_us.jpg" alt="Contact Us" />
+                    <img src="media/contact_us.jpg" alt="Contact Us" onclick="showContact()" />
                     <div class="caption">Contact me today!</div>
                 </div>
                 <!--next/prev slide buttons-->
@@ -178,33 +178,19 @@
 
     <!--Contact-->
     <section id="contact">
-        <div class="wrap">
-            <div class="row">
-                <div class="col">
-                    <div class="photo-container">
-                        <div class="photo">
-                            <img src="media/contact_us.jpg" alt="Contact Us" />
-                            <div class="photo-overlay">
-                                <h4>
-
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <h2>
-                        Contact
-                    </h2>
-                    <form action="https://formspree.io/f/mrgjenrr" method="post">
-                        <input type="text" class="form-text" value="" placeholder="Name" required>
-                        <input type="email" class="form-text" value="" placeholder="Email" required>
-                        <textarea name="messageBox" class="form-text" id="message" cols="30" rows="10"
-                            placeholder="Write your message here."></textarea>
-                        <input type="submit" id="submit" value="Submit">
-                    </form>
-                </div>
-            </div>
+        <div>
+            <button class="contact button" onclick="showContact()">Contact</button>
+        </div>
+        <div id="hidden-form">
+            <h2>Contact Us</h2>
+            <form action="https://formspree.io/f/mrgjenrr" method="post">
+                <input type="text" class="form-text" value="" placeholder="Name" required />
+                <input type="email" class="form-text" value="" placeholder="Email" required />
+                <textarea name="messageBox" class="form-text" id="message" cols="30" rows="10"
+                    placeholder="Write your message here."></textarea>
+                <input type="submit" id="submit" class="button" value="Submit" />
+                <input type="button" id="close-form" class="button" onclick="closeContact()" value="Close" />
+            </form>
         </div>
     </section>
 </body>
