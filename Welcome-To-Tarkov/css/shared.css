@@ -1,0 +1,311 @@
+/*Author: Nathan Saxton
+tarkovliving.com*/
+
+html {
+    font-family: sans-serif;
+    font-size: 62.5%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-size: 14px;
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.42857143;
+    color: #a8a69f;
+    background-color: #0a0a0a;
+}
+
+footer {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    line-height: 50px;
+    font-weight: 900;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #807d68;
+}
+
+h1::after {
+    /* this is the underline*/
+    display: block;
+    content: "";
+    height: 2px;
+    width: 150px;
+    background: #807d68;
+    margin: 5px auto 40px;
+    box-shadow: 5px 2px 3px rgba(0, 0, 0, .5);
+}
+
+h2 {
+    line-height: 50px;
+    color: #807d68;
+}
+
+h3 {
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+
+h4 {
+    padding-top: 25px;
+    line-height: 40px;
+    padding-bottom: 0px;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+p {
+    font-weight: 300;
+    line-height: 30px;
+    padding-bottom: 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.heading-padding {
+    padding-bottom: 40px;
+}
+
+section {
+    padding-top: 50px;
+    margin-top: 50px;
+}
+
+section #home {
+    padding-top: 0;
+}
+
+.menu-container {
+    height: 105px;
+    max-height: 340px;
+    margin: 0% auto;
+    display: block;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    padding: 0;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container:after,
+.menu:after {
+    clear: both;
+    display: table;
+    content: " ";
+}
+
+.wrap {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /* this is to ensure images don't render 
+    outside of container without forcing a scrollbar*/
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+#home {
+    background: url(../images/background.jpg) no-repeat 50% 50%;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    width: 100%;
+    display: block;
+    height: auto;
+    padding-top: 350px;
+    padding-bottom: 500px;
+    color: #a8a69f;
+    margin-top: 0;
+}
+
+.head-main {
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, .9);
+    font-variant: small-caps;
+    color: #807d68;
+    letter-spacing: 5pt;
+    word-spacing: 21pt;
+    font-size: 4.5em;
+    text-align: left;
+    font-family: impact, sans-serif;
+    line-height: 2;
+    font-weight: 900;
+    border: 5px double #807d68;
+    padding: 10px;
+    background-color: #0a0a0a;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 60%;
+    border-radius: 8px;
+    margin: 0px auto;
+    background-color: rgba(75, 88, 85, .3);
+    box-shadow: -1px -1px 1px 0 rgba(0, 0, 0, .1), 1px 2px 10px 0 rgba(0, 0, 0, .5);
+}
+
+#contact {
+    background-color: #5f6059;
+}
+
+.enrollment {
+    width: 60%;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 0px auto;
+    background-color: rgba(75, 88, 85, .3);
+    box-shadow: -1px -1px 1px 0 rgba(0, 0, 0, .1), 1px 2px 10px 0 rgba(0, 0, 0, .5);
+}
+
+.enrollment h2 {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    color: #a8a69f;
+    font-weight: 500;
+    font-size: 1.3em;
+    letter-spacing: 0pt;
+    word-spacing: 0pt;
+}
+
+.enrollment h2 span {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    color: #a8a69f;
+    font-weight: 900;
+    font-size: 1.5em;
+    font-variant: small-caps;
+    letter-spacing: .4pt;
+    word-spacing: .3pt;
+}
+
+.enrollment p {
+    color: #a8a69f;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.enrollment form {
+    font-size: 15px;
+    outline: none;
+    font-weight: 600;
+    color: #8d8e8f;
+    padding: 12px 12px;
+    width: 70%;
+    border: 1px solid #808080;
+    margin: 2% auto;
+    border-radius: 7px;
+    background: rgb(227, 222, 222);
+    box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, .3);
+    font-family: 'Raleway', sans-serif;
+}
+
+.enrollment input[type="text"],
+.enrollment input[type="email"],
+.enrollment input[type="number"] {
+    font-size: 15px;
+    outline: none;
+    font-weight: 600;
+    color: #8d8e8f;
+    padding: 2% 1% 2% 7%;
+    width: 80%;
+    border-top: 1px solid #090b0d;
+    border-right: 2px solid #424549;
+    border-bottom: 2px solid #424549;
+    border-left: 1px solid #090b0d;
+    margin: 10px 1em;
+    border-radius: 7px;
+    background: #13161b;
+    box-shadow: inset 0px 3px 0px 0px rgba(5, 5, 5, .15);
+    font-family: 'Raleway', sans-serif;
+}
+
+.enrollment input[type="text"]:hover,
+.enrollment input[type="email"]:hover,
+.enrollment input[type="number"]:hover {
+    box-shadow: 0 0 18px rgba(42, 44, 40, .8);
+}
+
+.form-spacer {
+    padding: 30px 39px;
+}
+
+.terms {
+    margin: 50px 1px 0 0;
+    padding-left: 52px;
+    font-size: 14px;
+    line-height: 5px;
+    color: #000;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    position: relative;
+    display: inline;
+    float: right;
+}
+
+.terms:hover {
+    color: #5f6059;
+    text-decoration: underline;
+}
+
+.submit-button input[type="submit"] {
+    color: rgb(225, 225, 225);
+    cursor: pointer;
+    border: none;
+    font-weight: 900;
+    outline: none;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin: 0px 3%;
+    padding: 7px 0px;
+    width: 25%;
+    font-size: 18px;
+    transition: border-color 0.3s color 0.3s background-color 0.3s;
+    border-radius: 7px;
+    background-color: #797a7b;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .3);
+}
+
+.submit-button input[type="submit"]:hover {
+    color: #000;
+    background-color: #8d8e8f;
+    box-shadow: inset 1px 2px 15px 0 rgba(0, 0, 0, .5);
+}
+
+footer {
+    background-color: rgba(34, 36, 32, .3);
+    color: #a8a69f;
+    text-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .4);
+    text-align: right;
+}
